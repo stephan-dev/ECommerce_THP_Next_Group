@@ -4,9 +4,9 @@ source 'https://rubygems.org'
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
+end
 
 File.read('./.ruby-version')
-
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -49,7 +49,6 @@ gem 'uglifier', '>= 1.3.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
